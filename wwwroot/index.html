@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Pro</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>User Management</h1>
+            <div id="tokenStatus" class="auth-badge">
+                <i class="fa-solid fa-shield-halved"></i> &nbsp; Securing API Session
+            </div>
+        </header>
+
+        <main>
+            <!-- Sidebar: User Form -->
+            <aside class="glass-card">
+                <h2><i class="fa-solid fa-user-plus"></i> New Entity</h2>
+                <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 30px;">Complete the form below to
+                    register a new user in the MySQL database.</p>
+                <form id="userForm">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="e.g. John Wick" required autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email Instance</label>
+                        <input type="email" id="email" placeholder="e.g. wick@continental.com" required
+                            autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-bolt-lightning"></i> Deploy User
+                    </button>
+                </form>
+            </aside>
+
+            <!-- Content: User List -->
+            <section class="table-section glass-card">
+                <div class="table-header">
+                    <h2><i class="fa-solid fa-database"></i> Live Directory</h2>
+                    <button id="refreshBtn" class="btn" style="background: rgba(255,255,255,0.05); color: #fff;">
+                        <i class="fa-solid fa-rotate"></i>
+                    </button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table id="userTable">
+                        <thead>
+                            <tr>
+                                <th># ID</th>
+                                <th>IDENTITY</th>
+                                <th>DOMAIN ACCESS</th>
+                                <th style="text-align: right;">SYSTEM ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody">
+                            <!-- Populated by JS -->
+                            <tr>
+                                <td colspan="4" style="text-align: center; color: var(--text-dim); padding: 40px;">
+                                    <i class="fa-solid fa-spinner fa-spin"></i> Synchronizing with XAMPP...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modern Notifications -->
+    <div id="notifications"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
