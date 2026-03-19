@@ -34,10 +34,10 @@ A premium, glassmorphic User Management application built with **ASP.NET Core 9 
 ## 📸 Screenshots
 
 ### 🖥️ Dashboard UI
-![Dashboard](screenshots/ss1.png)
+![Dashboard](screenshot/ss1.png)
 
 ### 🧪 API Swagger Interface
-![Swagger](screenshots/ss2.png)
+![Swagger](screenshot/ss2.png)
 
 ## 🚀 Getting Started
 
